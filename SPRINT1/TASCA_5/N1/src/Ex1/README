@@ -1,0 +1,9 @@
+************ Steps to run the program from the command line **********************
+
+1. Open window's command prompt (cmd).
+2. Write down "java" and the relative route of the program you want to run.
+3. The program will execute, this one asks us to write down the route to the directory we
+    want to sort. Write it down.
+4. The program will sort alphabetically the elements inside that directory.
+
+--- Thank you.

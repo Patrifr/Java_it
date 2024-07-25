@@ -10,7 +10,6 @@ public class Main {
         findDirectory();
 
     }
-    //Buscar el directorio y ver si la ruta es válida o no.
     public static void findDirectory(){
         Scanner entry = new Scanner(System.in);
         System.out.println("Write the directory's absolute route");
@@ -24,7 +23,6 @@ public class Main {
             System.out.println("No valid route.");
         }
     }
-    //si el directorio no está vacio ordenarlo alfabeticamente y escribirlo en un fichero.
     public static void listDirectory(File directory){
         if(directory == null){
             System.out.println("The directory is empty");
