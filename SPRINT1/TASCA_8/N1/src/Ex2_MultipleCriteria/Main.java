@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N1.Ex2_MultipleCriteria;
+package Ex2_MultipleCriteria;
 
 import java.util.Arrays;
 import java.util.List;

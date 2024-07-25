@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N1.Ex1_StringsWithO;
+package Ex1_StringsWithO;
 
 import java.util.Arrays;
 import java.util.List;

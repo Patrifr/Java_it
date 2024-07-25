@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_3.N2.Exercici2_Restaurant2;
+package Exercici2_Restaurant2;
 
 import java.util.HashSet;
 import java.util.TreeSet;

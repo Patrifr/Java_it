@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_4.N1.Ex3_ArrayIndexOOB;
+package Ex3_ArrayIndexOOB;
 
 public class ArrayIndexOutOfBounds {
 

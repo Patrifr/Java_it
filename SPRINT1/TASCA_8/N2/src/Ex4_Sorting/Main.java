@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N2.Ex4_Sorting;
+package Ex4_Sorting;
 
 import java.util.Arrays;
 import java.util.Comparator;

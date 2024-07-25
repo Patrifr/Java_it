@@ -1,6 +1,6 @@
-package SPRINT1.TASCA4.N1.EX2;
+package N1.EX2;
 
-import SPRINT1.TASCA_4.N1.Ex2_DNI.CalculateDNI;
+import Ex2_DNI.CalculateDNI;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 

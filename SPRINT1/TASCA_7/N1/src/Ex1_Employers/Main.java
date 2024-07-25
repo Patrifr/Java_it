@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_7.N1.Ex1_Employers;
+package Ex1_Employers;
 
 public class Main {
     public static void main(String[] args) {

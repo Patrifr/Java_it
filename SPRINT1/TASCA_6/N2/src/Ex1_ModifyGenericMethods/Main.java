@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_6.N2.Ex1_ModifyGenericMethods;
+package Ex1_ModifyGenericMethods;
 
 public class Main {
     public static void main(String[] args) {

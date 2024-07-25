@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_5.N1.Ex1;
+package Ex1;
 
 import java.io.File;
 import java.util.Arrays;

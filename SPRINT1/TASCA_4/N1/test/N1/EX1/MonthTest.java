@@ -1,5 +1,5 @@
-package SPRINT1.TASCA4.N1.EX1;
-import SPRINT1.TASCA_4.N1.Ex1_JUnitMonths.Months;
+package N1.EX1;
+import Ex1_JUnitMonths.Months;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;

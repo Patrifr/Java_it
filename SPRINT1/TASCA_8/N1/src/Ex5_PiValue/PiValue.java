@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N1.Ex5_PiValue;
+package Ex5_PiValue;
 
 @FunctionalInterface
 public interface PiValue {

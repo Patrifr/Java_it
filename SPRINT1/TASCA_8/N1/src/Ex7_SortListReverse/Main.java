@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N1.Ex7_SortListReverse;
+package Ex7_SortListReverse;
 
 import java.util.Arrays;
 import java.util.Comparator;

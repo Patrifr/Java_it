@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N3.Ex1_Alumnes;
+package Ex1_Alumnes;
 
 import java.util.ArrayList;
 import java.util.Comparator;

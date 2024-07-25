@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_4.N1.Ex2_DNI;
+package Ex2_DNI;
 
 public class CalculateDNI {
     private final  int NUM_DNI;

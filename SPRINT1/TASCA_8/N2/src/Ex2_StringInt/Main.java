@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N2.Ex2_StringInt;
+package Ex2_StringInt;
 
 import java.util.Arrays;
 import java.util.List;

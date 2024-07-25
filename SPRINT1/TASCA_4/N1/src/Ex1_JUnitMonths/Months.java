@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_4.N1.Ex1_JUnitMonths;
+package Ex1_JUnitMonths;
 
 import java.util.ArrayList;
 

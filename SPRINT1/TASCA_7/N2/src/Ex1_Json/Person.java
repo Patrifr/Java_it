@@ -1,7 +1,7 @@
-package SPRINT1.TASCA_7.N2.Ex1_Json;
+package Ex1_Json;
 import java.io.Serializable;
 
-@Serializer(directory = "C:/Users/patri/Desktop/Java_itAcademy/src/main/java/SPRINT1/TASCA_7/N2/Ex1_Json")
+@Serializer(directory = "./SPRINT1/TASCA_7/N2/src/Ex1_Json")
 
 public class Person implements Serializable{
     private String name;

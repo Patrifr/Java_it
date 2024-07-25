@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_7.N1.Ex1_Employers;
+package Ex1_Employers;
 
 public class EmployeeOnSite extends Employee {
     private static int gasoline;

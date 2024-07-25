@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_6.N1.Ex2_GenericMethods;
+package Ex2_GenericMethods;
 
 public class Person {
     private String name;

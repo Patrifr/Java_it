@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N2.Ex1_Names;
+package Ex1_Names;
 
 import java.util.Arrays;
 import java.util.List;

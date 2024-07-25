@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_6.N1.Ex1_NoGenericMethod;
+package Ex1_NoGenericMethod;
 
 public class Main {
     public static void main(String[] args) {

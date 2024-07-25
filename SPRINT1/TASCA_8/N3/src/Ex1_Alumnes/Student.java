@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N3.Ex1_Alumnes;
+package Ex1_Alumnes;
 
 public class Student {
     private String name;

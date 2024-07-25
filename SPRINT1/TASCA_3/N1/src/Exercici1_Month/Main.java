@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_3.N1.Exercici1_Month;
+package Exercici1_Month;
 
 import java.util.ArrayList;
 import java.util.HashSet;

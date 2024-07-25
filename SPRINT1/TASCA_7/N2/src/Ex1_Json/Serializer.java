@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_7.N2.Ex1_Json;
+package Ex1_Json;
 
 import java.lang.annotation.ElementType;
 

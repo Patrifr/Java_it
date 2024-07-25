@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N2.Ex3_Operation;
+package Ex3_Operation;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N1.Ex3_Months;
+package Ex3_Months;
 
 import java.util.Arrays;
 import java.util.List;

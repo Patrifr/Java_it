@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_2.N2.Exercici1_Entrada;
+package Exercici1_Entrada;
 
 import java.util.Scanner;
 

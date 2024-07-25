@@ -1,4 +1,4 @@
-package SPRINT1.TASCA4.N2.EX1;
+package EX1;
 
 import org.hamcrest.FeatureMatcher;
 import org.hamcrest.Matcher;

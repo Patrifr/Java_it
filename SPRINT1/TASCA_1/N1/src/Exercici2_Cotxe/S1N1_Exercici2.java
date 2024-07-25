@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_1.N1.Exercici2_Cotxe;
+package Exercici2_Cotxe;
 
 public class S1N1_Exercici2 {
 

@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_1.N1.Exercici1_Grup_Musica;
+package Exercici1_Grup_Musica;
 
 public class Corda extends Instrument {
 

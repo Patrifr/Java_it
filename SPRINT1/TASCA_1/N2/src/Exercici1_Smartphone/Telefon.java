@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_1.N2.Exercici1_Smartphone;
+package Exercici1_Smartphone;
 
 public class Telefon {
 	String marca;

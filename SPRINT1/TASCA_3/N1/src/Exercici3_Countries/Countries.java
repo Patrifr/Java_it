@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_3.N1.Exercici3_Countries;
+package Exercici3_Countries;
 
 import java.io.*;
 import java.util.HashMap;
@@ -49,7 +49,7 @@ public class Countries {
 
         BufferedReader reader = null;
         try {
-            FileReader countries = new FileReader("src/main/java/SPRINT1/TASCA_3/N1/Exercici3_Countries/countries.txt");
+            FileReader countries = new FileReader("./SPRINT1/TASCA_3/N1/src/Exercici3_Countries/countries.txt");
             reader = new BufferedReader(countries);
             String data;
 
@@ -66,8 +66,8 @@ public class Countries {
         return fileMap;
     }
     public static void saveUserData(String name, int points){
-        try (FileWriter writer = new FileWriter("src/main/java/SPRINT1/TASCA_3/N1/Exercici3_Countries/UserData.txt",true)){
-            String data = "User name: " + name + " - Total points: " + points + ".";
+        try (FileWriter writer = new FileWriter("./SPRINT1/TASCA_3/N1/src/Exercici3_Countries/UserData.txt",true)){
+            String data = "User name: " + name + " - Total points: " + points + ".\n";
             writer.write(data);
             System.out.println("The file has been successfully written.");
         } catch (IOException e) {

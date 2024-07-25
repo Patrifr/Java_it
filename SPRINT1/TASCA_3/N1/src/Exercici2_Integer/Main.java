@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_3.N1.Exercici2_Integer;
+package Exercici2_Integer;
 
 import java.util.ArrayList;
 import java.util.Collection;

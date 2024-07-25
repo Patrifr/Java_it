@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_8.N1.Ex4_MethodReference;
+package Ex4_MethodReference;
 
 import java.util.Arrays;
 import java.util.List;

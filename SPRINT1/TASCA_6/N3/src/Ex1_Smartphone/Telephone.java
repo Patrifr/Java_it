@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_6.N3.Ex1_Smartphone;
+package Ex1_Smartphone;
 
 public interface Telephone {
 

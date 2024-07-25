@@ -1,6 +1,6 @@
-package SPRINT1.TASCA4.N1.EX3;
+package N1.EX3;
 
-import SPRINT1.TASCA_4.N1.Ex3_ArrayIndexOOB.ArrayIndexOutOfBounds;
+import Ex3_ArrayIndexOOB.ArrayIndexOutOfBounds;
 import org.junit.jupiter.api.Test;
 import org.junit.Assert;
 public class ArrayIndexOOBTest {

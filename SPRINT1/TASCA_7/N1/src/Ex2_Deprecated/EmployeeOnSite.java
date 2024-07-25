@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_7.N1.Ex2_Deprecated;
+package Ex2_Deprecated;
 
 public class EmployeeOnSite extends Employee {
     private static int gasoline;

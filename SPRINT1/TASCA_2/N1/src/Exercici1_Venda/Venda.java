@@ -1,4 +1,4 @@
-package SPRINT1.TASCA_2.N1.Exercici1_Venda;
+package Exercici1_Venda;
 
 import java.util.ArrayList;
 
