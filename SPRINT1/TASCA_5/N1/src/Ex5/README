@@ -1,0 +1,15 @@
+1. Open window's command prompt (cmd).
+
+2. Enter "cd" + the path to the sources root folder.
+   ---> Ex: "C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src"
+
+2. Compile the files. Enter javac + package's name/className.java.
+   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>javac Ex5/Main.java"
+
+3. Execute the app. Enter java + package's name/className + package's name.
+   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>java Ex5/Main Ex5"
+
+4. The program will show a menu. It implements the other exercise's methods and two new methods to serialize
+   and deserialize an Object. Follow the program's instructions.
+
+************** Thank you. **************

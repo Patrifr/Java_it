@@ -52,7 +52,7 @@ public class Main {
         }
     }
     public static void saveData(String data){
-        try(FileWriter writer = new FileWriter("./SPRINT1/TASCA_5/N1/src/Ex3/SavedData.txt",true)){
+        try(FileWriter writer = new FileWriter("SavedData.txt",true)){
             String writeData = data + "\n";
             writer.write(writeData);
             writer.close();

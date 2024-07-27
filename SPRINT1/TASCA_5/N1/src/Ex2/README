@@ -6,14 +6,14 @@
    ---> Ex: "C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src"
 
 2. Compile the files. Enter javac + package's name/className.java.
-   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>javac Ex1/Main.java"
+   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>javac Ex2/Main.java"
 
 3. Execute the app. Enter java + package's name/className + package's name.
-   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>java Ex1/Main Ex1"
+   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>java Ex2/Main Ex2"
 
 4. The program will ask for a path to a directory.
    ---> Ex: "C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_3\N1\src"
 
-4. The program will sort alphabetically the elements inside that directory.
-
+4. The program will sort alphabetically the elements inside that directory, indicating whether an element is
+   a directory "D" or a file "F" and showing the last modification date.
 ************** Thank you. **************

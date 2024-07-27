@@ -1,19 +1,18 @@
-********************** Steps to run the program from the command line **********************
-
 1. Open window's command prompt (cmd).
 
 2. Enter "cd" + the path to the sources root folder.
    ---> Ex: "C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src"
 
 2. Compile the files. Enter javac + package's name/className.java.
-   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>javac Ex1/Main.java"
+   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>javac Ex3/Main.java"
 
 3. Execute the app. Enter java + package's name/className + package's name.
-   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>java Ex1/Main Ex1"
+   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>java Ex3/Main Ex3"
 
 4. The program will ask for a path to a directory.
    ---> Ex: "C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_3\N1\src"
 
-4. The program will sort alphabetically the elements inside that directory.
+4. The program will print on a file the alphabetically sorted elements inside that directory, indicating whether an element is
+   a directory "D" or a file "F" and showing the last modification date.
 
 ************** Thank you. **************
