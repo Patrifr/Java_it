@@ -1,37 +1,37 @@
 package Ex1_NoGenericMethod;
 
 public class NoGenericMethods<T> {
-    private T t1;
-    private T t2;
-    private T t3;
+    private Person person1;
+    private Person person2;
+    private Person person3;
 
-    public NoGenericMethods(T t1, T t2, T t3) {
-        this.t1 = t1;
-        this.t2 = t2;
-        this.t3 = t3;
+    public NoGenericMethods(Person person1, Person person2, Person person3) {
+        this.person1 = person1;
+        this.person2 = person2;
+        this.person3 = person3;
     }
-    public T getT1() {
-        return t1;
+    public Person getPerson1() {
+        return person1;
     }
-    public T getT2() {
-        return t2;
+    public Person getPerson2() {
+        return person2;
     }
-    public T getT3() {
-        return t3;
+    public Person getPerson3() {
+        return person3;
     }
 
-    public void setT1(T t1) {
-        this.t1 = t1;
+    public void setPerson1(Person person1) {
+        this.person1 = person1;
     }
-    public void setT2(T t2) {
-        this.t2 = t2;
+    public void setPerson2(Person person2) {
+        this.person2 = person2;
     }
-    public void setT3(T t3) {
-        this.t3 = t3;
+    public void setPerson3(Person person3) {
+        this.person3 = person3;
     }
     @Override
     public String toString(){
-        return "This box contains: " + this.getT1() + ", " + this.getT2() + " and " +
-                this.getT3() + ".";
+        return "This box contains: " + this.getPerson1() + ", " + this.getPerson2() + " and " +
+                this.getPerson3() + ".";
     }
 }
