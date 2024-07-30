@@ -15,27 +15,24 @@ public class Main {
         Scanner entry = new Scanner(System.in);
         System.out.println("Write the directory's absolute route:");
         File directory = new File(entry.nextLine());
-        try {
-            if(directory.isDirectory()){
-                System.out.println("Valid route. Listing your directory's files....");
-                listDirectoryTree(directory);
-            }
-        }catch (Exception e){
+        if(directory.exists() && directory.isDirectory()){
+            System.out.println("Valid route. Listing your directory's files....\n");
+            listDirectoryTree(directory);
+        }else{
             System.out.println("No valid route.");
         }
+        entry.close();
     }
 
     public static void listDirectoryTree(File directory){
         SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-
-        if(directory == null){
+        File [] directoryTree = directory.listFiles();
+        if(directoryTree == null){
             System.out.println("The directory is empty");
         }else{
-            File [] directoryTree = directory.listFiles();
             Arrays.sort(directoryTree);
             for(File file : directoryTree){
-
-                    if(file.isDirectory()){
+                    if(file.exists() && file.isDirectory()){
                         System.out.println("D " + file.getName() + "Last modified: " +
                                 date.format(file.lastModified()));
                         listDirectoryTree(file);

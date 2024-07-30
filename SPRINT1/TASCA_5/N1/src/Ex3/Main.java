@@ -17,35 +17,29 @@ public class Main {
         Scanner entry = new Scanner(System.in);
         System.out.println("Write the directory's absolute route:");
         File directory = new File(entry.nextLine());
-        try {
-            if(directory.isDirectory()){
-                System.out.println("Valid route. Listing your directory's files....");
-                listDirectoryTree(directory);
-                System.out.println("The file has been successfully written.");
-            }
-        }catch (Exception e){
+
+        if(directory.exists() && directory.isDirectory() && directory.canRead()){
+            System.out.println("Valid route. Listing your directory's files....\n");
+            listDirectoryTree(directory);
+            System.out.println("The file has been successfully written.");
+            }else{
             System.out.println("No valid route.");
-        }
+            }
         entry.close();
     }
 
     public static void listDirectoryTree(File directory){
         SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-
-        if(directory == null){
-            System.out.println("The directory is empty");
-        }else{
-            File [] directoryTree = directory.listFiles();
-            Arrays.sort(directoryTree);
-            for(File file : directoryTree){
-                if(file.isDirectory()){
-                    saveData("D " +  file.getName() + "Last modified: " +
-                                date.format(file.lastModified()));
-                    listDirectoryTree(file);
-                } else{
-                    saveData("F " + file.getName() + "Last modified: " +
-                            date.format(file.lastModified()));
-                }
+        File [] directoryTree = directory.listFiles();
+        Arrays.sort(directoryTree);
+        for(File file : directoryTree){
+            if(file.exists() && file.isDirectory()){
+                saveData("D " +  file.getName() + "Last modified: " +
+                        date.format(file.lastModified()));
+                listDirectoryTree(file);
+            } else{
+                saveData("F " + file.getName() + "Last modified: " +
+                        date.format(file.lastModified()));
             }
         }
     }
@@ -54,7 +48,6 @@ public class Main {
         try(FileWriter writer = new FileWriter("SavedData.txt",true)){
             String writeData = data + "\n";
             writer.write(writeData);
-            writer.close();
         }catch (IOException e) {
             System.out.println("Error. " + e.getMessage());
         }

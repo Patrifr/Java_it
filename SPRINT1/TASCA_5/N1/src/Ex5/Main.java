@@ -42,7 +42,7 @@ public class Main {
                     deserializeObj();
                     break;
                 case 0:
-                    System.out.println("Thank you.");
+                    System.out.println("Thank you. Goodbye.");
                     break;
             }
         }while(option != 0);
@@ -53,12 +53,10 @@ public class Main {
         Scanner entry = new Scanner(System.in);
         System.out.println("Write the directory's absolute route:");
         File directory = new File(entry.nextLine());
-        try {
-            if(directory.isDirectory()){
-                System.out.println("Valid route. Listing your directory's files....");
-                listDirectoryTree(directory);
-            }
-        }catch (Exception e){
+        if(directory.isDirectory() && directory.exists() && directory.canRead()){
+            System.out.println("Valid route. Listing your directory's files....\n");
+            listDirectoryTree(directory);
+        }else{
             System.out.println("No valid route.");
         }
     }
@@ -68,13 +66,11 @@ public class Main {
         System.out.println("Write the directory's absolute route:");
         String path = entry.nextLine();
         File directory = new File(path);
-        try {
-            if(directory.isDirectory()){
-                System.out.println("Valid route. Listing your directory's files....");
-                listDirectoryTreeOnAFile(directory);
-                System.out.println("The file has been successfully written.");
-            }
-        }catch (Exception e){
+        if(directory.isDirectory() && directory.exists() && directory.canRead()){
+            System.out.println("Valid route. Listing your directory's files....\n");
+            listDirectoryTreeOnAFile(directory);
+            System.out.println("The file has been successfully written.");
+        }else{
             System.out.println("No valid route.");
         }
     }
@@ -84,55 +80,42 @@ public class Main {
         System.out.println("Write the directory's absolute route:");
         String path = entry.nextLine();
         File directory = new File(path);
-        try {
-            if (directory.isFile()) {
-                System.out.println("Valid path. Reading an printing it's content....");
-                readFile(path);
-            }
-        }catch (Exception e){
+        if (directory.isFile() && directory.exists() && directory.canRead()) {
+            System.out.println("Valid path. Reading an printing it's content....\n");
+            readFile(path);
+        }else{
             System.out.println("No valid route.");
         }
     }
 
     public static void listDirectoryTree(File directory){
         SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-
-        if(directory == null){
-            System.out.println("The directory is empty");
-        }else{
-            File [] directoryTree = directory.listFiles();
-            Arrays.sort(directoryTree);
-            for(File file : directoryTree){
-
-                if(file.isDirectory()){
-                    System.out.println("D " + file.getName() + "Last modified: " +
-                            date.format(file.lastModified()));
-                    listDirectoryTree(file);
-                } else{
-                    System.out.println("F " + file.getName() + "Last modified: " +
-                            date.format(file.lastModified()));
-                }
+        File [] directoryTree = directory.listFiles();
+        Arrays.sort(directoryTree);
+        for(File file : directoryTree){
+            if(file.exists() && file.isDirectory() && file.canRead()){
+                System.out.println("D " + file.getName() + "Last modified: " +
+                        date.format(file.lastModified()));
+                listDirectoryTree(file);
+            } else{
+                System.out.println("F " + file.getName() + "Last modified: " +
+                        date.format(file.lastModified()));
             }
         }
     }
 
     public static void listDirectoryTreeOnAFile(File directory){
         SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-
-        if(directory == null){
-            System.out.println("The directory is empty");
-        }else{
-            File [] directoryTree = directory.listFiles();
-            Arrays.sort(directoryTree);
-            for(File file : directoryTree){
-                if(file.isDirectory()){
-                    saveData("D " +  file.getName() + "Last modified: " +
-                                date.format(file.lastModified()));
-                    listDirectoryTreeOnAFile(file);
-                } else{
-                    saveData("F " + file.getName() + "Last modified: " +
-                            date.format(file.lastModified()));
-                }
+        File [] directoryTree = directory.listFiles();
+        Arrays.sort(directoryTree);
+        for(File file : directoryTree){
+            if(file.isDirectory() && file.exists() && file.canRead()){
+                saveData("D " +  file.getName() + "Last modified: " +
+                        date.format(file.lastModified()));
+                listDirectoryTreeOnAFile(file);
+            } else{
+                saveData("F " + file.getName() + "Last modified: " +
+                        date.format(file.lastModified()));
             }
         }
     }
@@ -141,7 +124,6 @@ public class Main {
         try(FileWriter writer = new FileWriter("SavedData.txt",true)){
             String writeData = data + "\n";
             writer.write(writeData);
-            writer.close();
         }catch (IOException e) {
             System.out.println("Error. " + e.getMessage());
         }

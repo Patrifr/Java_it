@@ -12,22 +12,21 @@ public class Main {
     }
     public static void findDirectory(){
         Scanner entry = new Scanner(System.in);
-        System.out.println("Write the directory's absolute route");
+        System.out.println("Write the directory's absolute route:");
         File directory = new File(entry.nextLine());
-        try {
-            if(directory.isDirectory()){
-                System.out.println("Valid route. Listing your directory's files....");
-                listDirectory(directory);
-            }
-        }catch (Exception e){
+        if(directory.exists() && directory.isDirectory()){
+            System.out.println("Valid route. Listing your directory's files....");
+            listDirectory(directory);
+            }else{
             System.out.println("No valid route.");
-        }
+            }
+        entry.close();
     }
     public static void listDirectory(File directory){
-        if(directory == null){
+        File[] files = directory.listFiles();
+        if(files == null){
             System.out.println("The directory is empty");
         }else{
-            File[] files = directory.listFiles();
             Arrays.sort(files);
             Arrays.stream(files).toList().forEach(System.out::println);
         }
