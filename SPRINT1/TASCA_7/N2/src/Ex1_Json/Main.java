@@ -5,34 +5,35 @@ import com.google.gson.GsonBuilder;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
+
        Person person = new Person("Vanessa","Waitress",33);
+
        jsonSerializer(person);
     }
-    public static void jsonSerializer(Object object){
-        try{
-            if(object.getClass().isAnnotationPresent(Serializer.class)){
-                Serializer annotation = object.getClass().getAnnotation(Serializer.class);
-                String fileName = annotation.fileName();
-                String directory = annotation.directory();
 
+    public static void jsonSerializer(Object object){
+        if(object.getClass().isAnnotationPresent(Serializer.class)){
+            Serializer annotation = object.getClass().getAnnotation(Serializer.class);
+            String fileName = annotation.fileName();
+            String directory = annotation.directory();
+
+            File file = new File(directory,fileName);
+
+            try(FileWriter writer = new FileWriter(file,true);){
                 Gson gson = new GsonBuilder().setPrettyPrinting().create();
                 String user = gson.toJson(object);
 
-                File file = new File(directory,fileName);
-                FileWriter writer = new FileWriter(file,true);
                 writer.write(user);
-                writer.close();
                 System.out.println("The object has been successfully serialized.");
-            }else{
-                System.out.println("Object's class has no annotation.");
+                
+            }catch (Exception e) {
+                System.out.println("Error. The Object could not be serialized into a json file." + e.getMessage());
             }
-        }catch (IOException e) {
-            throw new RuntimeException(e);
+        }else{
+            System.out.println("Object's class has no annotation.");
         }
     }
-
 }
