@@ -11,7 +11,7 @@ public class Main {
         System.out.println(orderedNumbers);
 
     }
-    public static String createNewList(List<Integer> intList){
+    private static String createNewList(List<Integer> intList){
         StringBuilder builder = new StringBuilder();
         String newString = intList.stream().map(n ->((n % 2 == 0) ? "e" : "o") + n).collect(Collectors.joining(", "));
         return newString;

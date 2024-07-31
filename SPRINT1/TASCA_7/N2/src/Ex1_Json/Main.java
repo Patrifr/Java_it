@@ -28,7 +28,7 @@ public class Main {
 
                 writer.write(user);
                 System.out.println("The object has been successfully serialized.");
-                
+
             }catch (Exception e) {
                 System.out.println("Error. The Object could not be serialized into a json file." + e.getMessage());
             }
