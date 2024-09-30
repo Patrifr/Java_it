@@ -1,3 +1,5 @@
+USE universidad;
+
 SELECT apellido1, apellido2, nombre FROM persona  WHERE tipo = "alumno" ORDER BY apellido1, apellido2, nombre;
 SELECT nombre, apellido1, apellido2 FROM persona WHERE tipo = "alumno" AND telefono IS NULL ORDER BY nombre;
 SELECT * FROM persona WHERE tipo = "alumno" AND YEAR(fecha_nacimiento) = "1999";
