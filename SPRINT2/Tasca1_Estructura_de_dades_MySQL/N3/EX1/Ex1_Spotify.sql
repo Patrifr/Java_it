@@ -3,7 +3,7 @@ CREATE DATABASE spotify;
 USE spotify;
 
 CREATE TABLE users(
-user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 user_type ENUM('Premium', 'Free') NOT NULL,
 email VARCHAR(100) NOT NULL,
 user_password VARCHAR(15) NOT NULL,
@@ -15,7 +15,7 @@ zip_code INT NOT NULL
 );
 
 CREATE TABLE premium_sub (
-subscription_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+subscription_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 user_id INT NOT NULL,
 subscription_start DATE NOT NULL,
 renovation_date DATE NOT NULL,
@@ -24,19 +24,19 @@ FOREIGN KEY(user_id) REFERENCES users (user_id)
 );
 
 CREATE TABLE credit_card(
-card_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+card_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 card_num VARCHAR(100) NOT NULL,
 expiration_date DATE NOT NULL,
 security_code INT NOT NULL
 );
 
 CREATE TABLE paypal(
-paypal_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+paypal_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 user_name VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE reg_payments(
-order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 subscription_id INT NOT NULL,
 card_id INT,
 paypal_id INT,
@@ -48,7 +48,7 @@ FOREIGN KEY (paypal_id) REFERENCES paypal (paypal_id)
 );
 
 CREATE TABLE artists(
-artist_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+artist_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 artist_name VARCHAR(100) NOT NULL,
 artist_image VARCHAR(100) NOT NULL,
 related_artists_id INT
@@ -58,7 +58,7 @@ ALTER TABLE artist
 ADD FOREIGN KEY (related_artists_id) REFERENCES artists (artist_id);
 
 CREATE TABLE albums(
-album_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+album_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 title VARCHAR(100) NOT NULL,
 artist_id INT NOT NULL,
 publication_date DATE NOT NULL,
@@ -67,7 +67,7 @@ FOREIGN KEY (artist_id) REFERENCES artists (artist_id)
 );
 
 CREATE TABLE playlists(
-playlist_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+playlist_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 user_id INT NOT NULL,
 title VARCHAR(100) NOT NULL,
 num_songs INT NOT NULL,
@@ -77,7 +77,7 @@ FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
 CREATE TABLE songs(
-song_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+song_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 album_id INT NOT NULL,
 title VARCHAR(100) NOT NULL,
 duration FLOAT NOT NULL,
@@ -88,14 +88,14 @@ FOREIGN KEY (playlist_id) REFERENCES playlists (playlist_id)
 );
 
 CREATE TABLE deleted_playlists(
-deleted_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+deleted_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 playlist_id INT NOT NULL,
 deleted_date DATE NOT NULL,
 FOREIGN KEY (playlist_id) REFERENCES playlists (playlist_id)
 );
 
 CREATE TABLE active_playlists(
-active_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+active_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 playlist_id INT NOT NULL,
 user_added_song_id INT NOT NULL,
 added_song_date DATE NOT NULL,
@@ -124,7 +124,7 @@ FOREIGN KEY (fav_artist_id) REFERENCES artists (artist_id)
 );
 
 CREATE TABLE user_follows(
-follow_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+follow_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 user_id INT NOT NULL,
 artist_id INT NOT NULL,
 FOREIGN KEY (user_id) REFERENCES users (user_id),

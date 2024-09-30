@@ -4,7 +4,6 @@ USE youtube;
 
 CREATE TABLE users(
 user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-UNIQUE(user_id),
 user_name VARCHAR(50) NOT NULL,
 UNIQUE(user_name),
 email VARCHAR(50) NOT NULL,
@@ -18,7 +17,6 @@ zip_code INT NOT NULL
 
 CREATE TABLE videos(
 video_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-UNIQUE(video_id),
 title VARCHAR(100) NOT NULL,
 video_description VARCHAR(300) NOT NULL,
 user_id INT NOT NULL,
@@ -36,14 +34,13 @@ FOREIGN KEY (user_id) REFERENCES users (user_id)
 
 CREATE TABLE tags(
 tag_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-UNIQUE(tag_id),
-tag_name VARCHAR (20),
+tag_name VARCHAR (20) UNIQUE,
 video_id INT NOT NULL,
 FOREIGN KEY (video_id) REFERENCES videos (video_id)
 );
 
 CREATE TABLE channels(
-channel_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+channel_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 channel_name VARCHAR(50) NOT NULL,
 user_id INT NOT NULL,
 channel_descrip VARCHAR(300) NOT NULL,
@@ -52,7 +49,7 @@ FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
 CREATE TABLE subscriptions(
-subscription_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+subscription_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 user_id INT NOT NULL,
 channel_suscribed_id INT NOT NULL,
 FOREIGN KEY (user_id) REFERENCES users (user_id),
@@ -60,7 +57,7 @@ FOREIGN KEY (channel_suscribed_id) REFERENCES channels (channel_id)
 );
 
 CREATE TABLE video_likes_dislikes(
-likes_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+likes_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 video_id INT NOT NULL,
 user_id INT NOT NULL,
 like_type ENUM('like', 'dislike') NOT NULL,
@@ -70,7 +67,7 @@ FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
 CREATE TABLE playlists(
-playlist_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+playlist_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 playlist_name VARCHAR(100) NOT NULL,
 visibility ENUM('public', 'private') NOT NULL,
 user_id INT NOT NULL,
@@ -78,7 +75,7 @@ FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
 CREATE TABLE comments(
-comment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+comment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 comment_text VARCHAR(500) NOT NULL,
 comment_date DATETIME NOT NULL,
 user_made_comment_id INT NOT NULL,
@@ -88,7 +85,7 @@ FOREIGN KEY (video_id) REFERENCES videos (video_id)
 );
 
 CREATE TABLE comment_like_dislike(
-comment_like_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+comment_like_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 comment_id INT NOT NULL,
 user_id INT NOT NULL,
 like_dislike ENUM('like', 'dislike') NOT NULL,
@@ -98,7 +95,7 @@ FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
 CREATE TABLE playlist_has_videos(
-playlist_has_videos_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+playlist_has_videos_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 video_id INT NOT NULL,
 playlist_id INT NOT NULL,
 FOREIGN KEY (video_id) REFERENCES videos (video_id),

@@ -10,7 +10,6 @@ door VARCHAR(10),
 city VARCHAR(100),
 zip_code INT NOT NULL,
 country VARCHAR(100) NOT NULL,
-UNIQUE(adress_id)
 );
 
 CREATE TABLE suppliers(
@@ -20,7 +19,6 @@ adress_id INT NOT NULL,
 phone VARCHAR(50) NOT NULL,
 fax VARCHAR(50) NOT NULL,
 NIF VARCHAR(50) NOT NULL,
-UNIQUE(supplier_id),
 FOREIGN KEY (adress_id) REFERENCES adress(adress_id)
 );
 
@@ -28,7 +26,6 @@ CREATE TABLE brand(
 brand_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 brand_name VARCHAR(100) NOT NULL,
 supplier_id INT NOT NULL,
-UNIQUE (brand_id),
 FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id)
 );
 
@@ -40,14 +37,12 @@ frame_type VARCHAR(50) NOT NULL,
 frame_color VARCHAR(50) NOT NULL,
 glass_color VARCHAR(50) NOT NULL,
 price DECIMAL(5,2) NOT NULL,
-UNIQUE (glass_id),
 FOREIGN KEY (brand_id) REFERENCES brand(brand_id)
 );
 
 CREATE TABLE employees(
   employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   employee_name VARCHAR(100) NOT NULL,
-  UNIQUE (employee_id)
   );
   
 CREATE TABLE customers(
@@ -59,7 +54,6 @@ mail VARCHAR(100) NOT NULL,
 registration_date DATETIME NOT NULL,
 employee_id INT NOT NULL,
 recomendation_id INT,
-UNIQUE(customer_id),
 FOREIGN KEY(adress_id) REFERENCES adress(adress_id),
 FOREIGN KEY(employee_id) REFERENCES employees(employee_id)
 );
@@ -69,12 +63,11 @@ ADD CONSTRAINT fk_recomendation
 FOREIGN KEY (recomendation_id) REFERENCES customers(customer_id);
 
 CREATE TABLE sales(
-sales_id int NOT NULL AUTO_INCREMENT,
+sales_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 customer_id INT NOT NULL,
 employee_id INT NOT NULL,
 glass_id INT NOT NULL,
 sale_date DATE NOT NULL,
-UNIQUE(sales_id),
 FOREIGN KEY(customer_id) REFERENCES customers(customer_id),
 FOREIGN KEY(employee_id) REFERENCES employees(employee_id),
 FOREIGN KEY(glass_id) REFERENCES glasses(glass_id)
