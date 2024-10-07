@@ -4,10 +4,10 @@
    ---> Ex: "C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src"
 
 2. Compile the files. Enter javac + package's name/className.java.
-   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>javac Ex4/Main.java"
+   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>javac Ex4/Parking.java"
 
 3. Execute the app. Enter java + package's name/className + package's name.
-   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>java Ex4/Main Ex4"
+   ---> Ex: "<C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_5\N1\src>java Ex4/Parking Ex4"
 
 4. The program will ask for a path to a .txt file.
    ---> Ex: "C:\Users\patri\Desktop\Java_it\SPRINT1\TASCA_3\N1\src\Exercici3_Countries\countries.txt"

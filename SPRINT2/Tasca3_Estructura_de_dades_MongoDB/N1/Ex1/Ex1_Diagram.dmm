@@ -128,7 +128,7 @@
 			"cols": [
 				{
 					"id": "9f4a316f-fb8c-49b6-ab29-9d939ee39a1d",
-					"name": "Adress",
+					"name": "Address",
 					"datatype": "99962f71-ef97-43d3-9ef1-57634890748e",
 					"param": "",
 					"pk": false,
@@ -734,7 +734,7 @@
 	"otherObjects": {},
 	"diagrams": {
 		"2f3a662f-c2a8-4d4b-9fa1-ac25a7c54644": {
-			"name": "Main Diagram",
+			"name": "Parking Diagram",
 			"description": "",
 			"id": "2f3a662f-c2a8-4d4b-9fa1-ac25a7c54644",
 			"keysgraphics": true,

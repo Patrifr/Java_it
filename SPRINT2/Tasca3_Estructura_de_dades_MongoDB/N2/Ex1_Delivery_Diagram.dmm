@@ -737,7 +737,7 @@
 				},
 				{
 					"id": "7d972e7e-1845-4077-903c-5cf42ec93a51",
-					"name": "Adress",
+					"name": "Address",
 					"datatype": "e8bc1979-67b8-4ced-8fd7-5c56613a92ec",
 					"param": "",
 					"pk": false,
@@ -1221,7 +1221,7 @@
 				},
 				{
 					"id": "abeb0563-15c0-4b8b-a010-ce2626a795e6",
-					"name": "Adress",
+					"name": "Address",
 					"datatype": "6c5fbdac-a08e-49e5-800b-d0ac0ee476d6",
 					"param": "",
 					"pk": false,
@@ -1639,7 +1639,7 @@
 	"otherObjects": {},
 	"diagrams": {
 		"81ee72e1-fc1b-4ec3-8d86-34ecec99a705": {
-			"name": "Main Diagram",
+			"name": "Parking Diagram",
 			"description": "",
 			"id": "81ee72e1-fc1b-4ec3-8d86-34ecec99a705",
 			"keysgraphics": true,
